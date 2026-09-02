@@ -3,7 +3,7 @@ Ejercicio 1 - Contar inversiones:
 Para este primer ejercicio utilize el metodo de divide and conquer, use Merge sort
 Arreglue el arreglo pero fui contando las inversiones que habia dentro de este. 
 Una inversion pasaba cuando el numero de la derecha es menor que uno en la parte izquierda. 
-Un ejemplo: 312 
+Un ejemplo: 3 1 2 
 Las inversiones en este caso serian (3,1), (3,2) por lo que el resultado seria 2. 
 La parte mas importante se encuentra cuando arr[i] > arr[j]
 Como la parte izquierda ya se encuentra ordenada, si arr[i] es mayor que todos los elementos desde i hasta mid tambien seran mayores. 
@@ -45,6 +45,20 @@ por lo tanto:
 Tiempo: O(n log n)
 Espacio: O(n)
     
+Test 1: 
+input: 3 
+3 1 2
+Output: 2
+
+Test 2: 
+Input: 5
+1 2 3 4 5 
+Output: 0 
+
+Test 3: 
+Input:5 
+5 4 3 2 1
+Output: 10 
 
 Ejercicio 2 - Salones para reuniones:
 Para este ejercicio utilice un metodo greedy, fui revisando las reuniones una por una y viendo si podia reutilizar un salon que ya habia sido usado anteriormente.
@@ -97,6 +111,28 @@ Espacio: O(m)
 
 El espacio es O(m) porque en el peor de los casos todas las reuniones se cruzan y cada una necesita un salon diferente, por lo que el vector rooms_check tendria m elementos.
 
+Test 1:
+Input: 3
+1 4
+2 5
+5 7
+Output: 2
+
+Test 2:
+Input: 4
+1 2
+2 3
+3 4
+4 5
+Output: 1
+
+Test 3:
+Input: 4
+1 10
+2 9
+3 8
+4 7
+Output: 4
 
 Ejercicio 3 - Dynamic Programming:
 Para este ejercicio utilice dynamic programming, la idea era encontrar el mayor valor posible sin pasarme del tiempo maximo T.
@@ -175,3 +211,25 @@ Por lo tanto:
 
 Tiempo: O(n * T)
 Espacio: O(T)
+
+Test 1:
+Input: 3 5
+2 4
+3 5
+4 6
+Output: 9
+
+Test 2:
+Input: 4 7
+3 4
+4 5
+2 3
+5 8
+Output: 11
+
+Test 3:
+Input: 3 6
+1 2
+2 4
+3 7
+Output: 13
