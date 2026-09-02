@@ -1,3 +1,8 @@
+/*
+Andres Tellez Bermudez A0164090 
+01/09/2026 Tarea 1 Ejercicio 2
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -32,12 +37,9 @@ int main() {
         if(rooms_check.size() == 0){
             rooms_check.push_back(meetings[i]); 
             rooms++; 
-            cout<<"Se agrego solo aqui"<<endl;
         }else{
             for(int j {0}; j < rooms_check.size(); j++){
-                cout<<"Este es rooms check: "<<rooms_check[j].second<<" Y este es meetings: "<<meetings[i].first<<endl; 
                 if(rooms_check[j].second <= meetings[i].first){
-                    cout<<"Se hizo el cambio con: "<<rooms_check[j].second<<" "<<meetings[i].first<<endl; 
                     rooms_check[j] = meetings[i]; 
                     break; 
                 }else if(j == rooms_check.size()-1){
